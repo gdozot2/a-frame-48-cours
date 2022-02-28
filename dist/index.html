@@ -18,6 +18,14 @@
         hover-highlighter
       ></a-box>
 
+      <gd-box
+        size="1"
+        color="blue"
+        position="2 0 -2"
+        cursor-listener
+        hover-highlighter>
+      </gd-box>
+
       <a-entity
         position="0 1.25 -2"
         animation__open="startEvents: open; property: rotation.y; to: 90; dur: 2000; easing: linear; loop: false"
@@ -35,6 +43,7 @@
           cursor-listener
           hover-highlighter
           toggle-events="evt1: open; evt2: close"
+          emit-when-near="target: #head; distance: 2; event: click; eventFar: unclick"
         ></a-box>
       </a-entity>
 
